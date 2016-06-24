@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<script src="libs/angular.min.js"></script>
+</head>
+<body>
+		<!-- <div ng-app="">
+			<input type="text"  ng-model="name"/>
+			<p ng-bind="name"></p>
+			<p>{{name}}</p>
+		</div> -->
+
+		<!-- <div ng-app="" ng-init="firstname='sharmila'">
+		<p>This is me,<span ng-bind="firstname"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="firstname='sharmila karki'">
+		<p>This is me,<span data-ng-bind="firstname"></span></p>
+		<p>{{11 + 11}}</p>
+		</div> -->
+
+		<div ng-app="my-app" ng-controller="my-controller">
+			<input type="text" ng-module="fName"/>
+			<input type="text" ng-module="lName"/>
+			<p> Full Name: {{fName +" " +lName}}</p>
+		</div>
+
+		<script type="text/javascript">
+			
+		var app=angular.module('my-app',[]);
+			app.controller('my-controller',function($scope){
+			$scope.fName="Sharmila";
+			$scope.lName="karki";
+		});
+		</script>
+</body>
+</html>
