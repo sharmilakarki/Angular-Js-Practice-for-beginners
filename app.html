@@ -19,7 +19,7 @@
 		<p>This is me,<span data-ng-bind="firstname"></span></p>
 		<p>{{11 + 11}}</p>
 		</div> -->
-
+<!-- 
 		<div ng-app="my-app" ng-controller="my-controller">
 			<input type="text" ng-module="fName"/>
 			<input type="text" ng-module="lName"/>
@@ -33,6 +33,12 @@
 			$scope.fName="Sharmila";
 			$scope.lName="karki";
 		});
-		</script>
+		</script> -->
+
+
+		<h2> Type the color and background of the input field gets changed</h2>
+		<div ng-app="" ng-init="color='blue'">
+			<input  style="background-color:{{color}}" ng-model="color" value="{{color}}"/>
+		</div>
 </body>
 </html>
