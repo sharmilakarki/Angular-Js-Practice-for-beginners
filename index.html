@@ -1,0 +1,158 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<script src="libs/angular.min.js"></script>
+</head>
+<body>
+		<!-- <div ng-app="">
+			<input type="text"  ng-model="name"/>
+			<p ng-bind="name"></p>
+			<p>{{name}}</p>
+		</div> -->
+
+		<!-- <div ng-app="" ng-init="firstname='sharmila'">
+		<p>This is me,<span ng-bind="firstname"></span></p>
+		</div> -->
+
+		<!-- <div data-ng-app="" data-ng-init="firstname='sharmila karki'">
+		<p>This is me,<span data-ng-bind="firstname"></span></p>
+		<p>{{11 + 11}}</p>
+		</div> -->
+
+
+<!-- 
+		------------------------------------------------------------ -->
+<!-- 
+		<div ng-app="my-app" ng-controller="my-controller">
+			<input type="text" ng-module="fName"/>
+			<input type="text" ng-module="lName"/>
+			<p> Full Name: {{fName +" " +lName}}</p>
+		</div>
+
+		<script type="text/javascript">
+			
+		var app=angular.module('my-app',[]);
+			app.controller('my-controller',function($scope){
+			$scope.fName="Sharmila";
+			$scope.lName="karki";
+		});
+		</script> -->
+		
+<!-- -----------------------------------------------------------------------------
+ -->
+		<!-- <div ng-app="" ng-init="quantity=1;cost=5">
+
+			<p>Total in dollar: {{ quantity * cost }}</p>
+
+		</div> -->
+
+		<!-- <h2> Type the color and background of the input field gets changed</h2>
+		<div ng-app="" ng-init="color='blue'">
+			<input  style="background-color:{{color}}" ng-model="color" value="{{color}}"/>
+		</div> -->
+
+
+		<!-- <div ng-app="" ng-init="persons={firstName:'sharmila',lastName:'karki'}">
+			<p> Her first name is {{persons.firstName}}</p>
+
+			<p> Her last name is <span ng-bind="persons.lastName"/></p>
+		</div> -->
+
+		<!-- 	<div ng-app="" ng-init="persons={firstName:'sharmila',lastName:'karki'};numbers=[1,2,3,4,5,6]">
+				<p> Her first name is {{persons.firstName}}</p>
+
+				<p> Her last name is <span ng-bind="persons.lastName"/></p>
+
+				<p>The 3rd number is {{numbers[2]}}</p>
+			</div> -->
+<!-- 
+			<div ng-app="myApp" w3-test-directive>
+
+			</div>
+
+			<script>
+				var app=angular.module("myApp",[]);
+				app.directive("w3TestDirective",function(){
+					return{
+						template:"This is page directive constructor"
+					};
+				});
+			</script> -->
+
+
+<!-- <div ng-app="" ng-init="names=[2,3,4,5,6]">
+	<ul>
+		<li ng-repeat="x in names">
+			{{x}}
+		</li>
+	</ul>
+</div> -->
+		
+
+	<!-- 	<div ng-app="" ng-init="names=[
+	{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+	<ul>
+		<li ng-repeat="x in names">
+			{{x.name }}
+		</li>
+	</ul>
+</div> -->
+
+
+<!-- ROOT SCOPE AND SCOPE -->
+	<!-- <body ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<p>{{color}}</p>
+		</div>
+		<p>{{color}}</p>
+		<script type="text/javascript">
+			var app=angular.module('myApp',[]);
+			app.run(function($rootScope){
+				$rootScope.color="blue";
+			});
+			app.controller('Ctrl',function($scope){
+				$scope.color="red";
+			});
+		</script>
+	</body> -->
+
+
+			<!-- UPPERCASE FILTERS
+ -->
+		<!-- <div ng-app="myApp" ng-controller="myCtrl">
+			<o>{{fName | uppercase}}</o>
+			<o>{{fName | lowercase}}</o>
+		</div>
+		<script type="text/javascript">
+			
+			var app=angular.module('myApp',[]);
+			app.controller('myCtrl',function($scope){
+				$scope.fName='sharmila';
+			});
+		</script> -->
+
+
+		<!-- FILTER DIRECTIVE -->
+		<div ng-app="myApp" ng-controller="myCtrl">
+			
+			<li ng-repeat="x in names |orderBy:lname">
+				{{x.fname +","+x.lname}}
+			</li>
+
+		</div>
+		<script type="text/javascript">
+			var app=angular.module('myApp',[])
+			app.controller('myCtrl',function($scope){
+					$scope.names=[
+					{fname:'sharmila',lname:'karki'},
+					{fname:'shusila',lname:'karki'}]
+			});
+		</script>
+
+		<!-- ------------------------------------ -->
+
+</body>
+</html>
